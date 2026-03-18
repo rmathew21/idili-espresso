@@ -1,10 +1,22 @@
-// import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 
-import { NavLink } from "react-router-dom"
 
 export default function Navbar() {
+    const [menuOpen, setMenuOpen] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
+    const location = useLocation()
 
+    useEffect(() => {
+        setMenuOpen(false)
+    }, [location])
+
+    useEffect(() => {
+        const handleScroll = () => setScrolled(window.scrollY > 20)
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+    
     const navLinks = [
         { to: '/', label: 'Home' },
         { to: '/menu', label: 'Menu' },
@@ -12,10 +24,14 @@ export default function Navbar() {
     ]
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-cream/95 backdrop-blur-sm shadow-sm">
+        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+            scrolled || menuOpen ? 'bg-cream/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
+        }`}
+        >
             <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-                <Link to="/" className="font-display text-lg tracking-wide text-expresso">
-                    Idili &amp; Expresso
+                {/* Logo */}
+                <Link to="/" className="font-display text-lg tracking-wide text-espresso">
+                    Idili &amp; Espresso
                 </Link>
 
                 <nav className="hidden md:flex items-center gap-10">
@@ -24,6 +40,9 @@ export default function Navbar() {
                             key={to}
                             to={to}
                             end={to === '/'}
+                            className={({ isActive }) =>
+                                `nav-link ${isActive ? 'text-gold' : ''}`
+                        }
                         >
                             {label}
                         </NavLink>
