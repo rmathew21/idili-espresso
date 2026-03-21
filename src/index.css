@@ -12,7 +12,7 @@
 
 @layer utilities {
   .nav-link {
-    @apply relative text-xs tracking-widest font-medium uppercase text-espresso transition-colors duration-200 hover:text-gold;
+    @apply relative text-xs tracking-widest font-medium uppercase  transition-colors duration-200;
   }
   .nav-link::after {
     content: '';

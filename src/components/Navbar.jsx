@@ -22,10 +22,12 @@ export default function Navbar() {
     { to: "/locations", label: "Locations" },
   ];
 
+  const isLight = scrolled || menuOpen;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || menuOpen
+        isLight
           ? "bg-cream/95 backdrop-blur-sm shadow-sm"
           : "bg-transparent"
       }`}
@@ -34,19 +36,25 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           to="/"
-          className="font-display text-lg tracking-wide text-espresso"
+          className={`font-display text-lg tracking-wide transition-colors duration-300 ${
+            isLight ? "text-espresso" : "text-cream"
+          }`}
         >
           Idili &amp; Espresso
         </Link>
 
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-10 ">
           {navLinks.map(({ to, label }) => (
             <NavLink
               key={to}
               to={to}
               end={to === "/"}
               className={({ isActive }) =>
-                `nav-link ${isActive ? "text-gold" : ""}`
+                `nav-link transition-colors duration-300 ${
+                    isLight 
+                    ? isActive ? "!text-gold" : "!text-espresso" 
+                    : isActive ? "!text-gold/80" : "!text-cream"
+                }`
               }
             >
               {label}
@@ -68,9 +76,9 @@ export default function Navbar() {
           className="md:hidden flex flex-col gap-1.5 p-1"
           aria-label="Toggle Menu"
         >
-          <span className={`block w-6 h-px bg-espresso transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2.5" : ""}`} />
-          <span className={`block w-6 h-px bg-espresso transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-px bg-espresso transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2.5" : ""}`}
+          <span className={`block w-6 h-px  transition-all duration-300 ${isLight ? "bg-espresso" : "bg-cream"} ${menuOpen ? "rotate-45 translate-y-2.5" : ""}`} />
+          <span className={`block w-6 h-px  transition-all duration-300 ${isLight ? "bg-espresso" : "bg-cream"} ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-6 h-px  transition-all duration-300 ${isLight ? "bg-espresso" : "bg-cream"} ${menuOpen ? "-rotate-45 -translate-y-2.5" : ""}`}
           />
         </button>
       </div>
@@ -88,7 +96,7 @@ export default function Navbar() {
               to={to}
               end={to === "/"}
               className={({ isActive }) =>
-                `nav-link ${isActive ? "text-gold" : ""}`
+                `nav-link ${isActive ? "text-gold" : "text-espresso"}`
               }
             >
               {label}
