@@ -53,7 +53,7 @@ export default function Navbar() {
                 `nav-link transition-colors duration-300 ${
                     isLight 
                     ? isActive ? "!text-gold" : "!text-espresso" 
-                    : isActive ? "!text-cream" : "!text-cream"
+                    : "!text-cream"
                 }`
               }
             >
