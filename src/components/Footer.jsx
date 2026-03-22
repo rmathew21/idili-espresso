@@ -22,9 +22,9 @@ export default function Footer() {
 
                     <div>
                         <h4 className="text-xs tracking-widest uppercase font-medium text-gold mb-4">Hours</h4>
-                        <p className="text-sm mb-1">Monday-riday</p>
+                        <p className="text-sm mb-1">Monday - Friday</p>
                         <p className="text-cream text-sm/60 mb-3">6:30 AM - 3:00 PM</p>
-                        <p className="text-sm mb-1">Saturday-Sunday</p>
+                        <p className="text-sm mb-1">Saturday - Sunday</p>
                         <p className="text-cream/60 text-sm">7:00 AM - 3:00 PM</p>
                     </div>
 
