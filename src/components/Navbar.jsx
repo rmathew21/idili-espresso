@@ -27,12 +27,15 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isLight
-          ? "bg-cream/95 backdrop-blur-sm shadow-sm"
-          : "bg-transparent"
+        isLight ? "bg-cream/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+          // ? "bg-cream/95 backdrop-blur-sm shadow-sm"
+          // : "bg-transparent"
       }`}
-    >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between"> 
+    > 
+    <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between"> 
+    <Link to="/">
+    <img src={isLight ? "/logoMocha.svg" : "/idiliAndEspressoNoSubTextLight.svg"} alt="Idili & Espresso" className="h-14 w-auto" />
+    </Link>
        
         {/* <Link
           to="/"
@@ -43,9 +46,9 @@ export default function Navbar() {
           Idili &amp; Espresso
         </Link> */}
 
-        <Link to="/" className="flex items-center">
-          <img src="/Idili&EspressoBlackBG.png" alt="Idili & Espresso" className="h-16 w-auto" />
-        </Link>
+        {/* <Link to="/" className="flex items-center">
+          <img src="/idiliAndEspressoNoSubText.svg" alt="Idili & Espresso" className="h-14 w-auto" />
+        </Link> */}
 
         <nav className="hidden md:flex items-center gap-10 ">
           {navLinks.map(({ to, label }) => (
