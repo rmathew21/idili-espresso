@@ -1,22 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Menu from './pages/Menu'
+import Locations from './pages/Locations'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col">
+      {/* <div className="min-h-screen flex flex-col"> */}
         <Navbar />
-        <main className="flex-1">
+        {/* <main className="flex-1"> */}
           <Routes>
             <Route index element={<Home />} />
             <Route path="menu" element={<Menu />} />
+            <Route path="locations" element={<Locations />} />
           </Routes>
-        </main>
+        {/* </main> */}
         <Footer />
-      </div>
+      {/* </div> */}
     </BrowserRouter>
   );
 }
