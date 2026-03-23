@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Menu from './pages/Menu'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -11,6 +12,7 @@ export default function App() {
         <main className="flex-1">
           <Routes>
             <Route index element={<Home />} />
+            <Route path="menu" element={<Menu />} />
           </Routes>
         </main>
         <Footer />
