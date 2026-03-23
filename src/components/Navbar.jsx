@@ -32,15 +32,19 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <Link
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between"> 
+       
+        {/* <Link
           to="/"
           className={`font-display text-lg tracking-wide transition-colors duration-300 ${
             isLight ? "text-espresso" : "text-cream"
           }`}
         >
           Idili &amp; Espresso
+        </Link> */}
+
+        <Link to="/" className="flex items-center">
+          <img src="/Idili&EspressoBlackBG.png" alt="Idili & Espresso" className="h-16 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10 ">
