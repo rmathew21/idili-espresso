@@ -34,7 +34,7 @@ export default function Navbar() {
     > 
     <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between"> 
     <Link to="/">
-    <img src={isLight ? "/logoMocha.svg" : "/idiliAndEspressoNoSubTextLight.svg"} alt="Idili & Espresso" className="h-14 w-auto" />
+    <img src={isLight ? "/canvaLogo_fixed.svg" : "/idiliAndEspressoNoSubTextLight.svg" } alt="Idili & Espresso" className="h-14 w-auto" />
     </Link>
        
         {/* <Link
