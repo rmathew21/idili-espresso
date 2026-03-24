@@ -6,6 +6,7 @@ import NotFound from './pages/NotFound'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import OrderOnline from "./pages/OrderOnline";
 
 export default function App() {
   return (
@@ -18,6 +19,8 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="menu" element={<Menu />} />
             <Route path="locations" element={<Locations />} />
+            <Route path="order-online" element={<OrderOnline />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         {/* </main> */}
