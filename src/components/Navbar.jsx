@@ -67,14 +67,19 @@ export default function Navbar() {
               {label}
             </NavLink>
           ))}
-          <a
+          {/* <a
             href="https://www.idiliespresso.com/store"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs tracking-widest font-medium uppercase bg-espresso text-cream px-5 py-2 hover:bg-mocha transition-colors duration-200"
           >
             Order Online
-          </a>
+          </a> */}
+          <Link 
+            to="/order-online"
+            className="text-xs tracking-widest font-medium uppercase bg-espresso text-cream px-5 py-2 hover:bg-mocha transition-colors duration-200">
+              Order Online
+          </Link>
         </nav>
 
         {/* Mobile Hamburger */}
@@ -109,14 +114,19 @@ export default function Navbar() {
               {label}
             </NavLink>
           ))}
-          <a
+          {/* <a
             href="https://www.idiliespresso.com/store"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs tracking-widest font-medium uppercase bg-espresso text-cream px-5 text-center hover:bg-mocha transition-colors duration-200"
           >
             Order Online
-          </a>
+          </a> */}
+          <Link 
+            to="/order-online"
+            className="text-xs tracking-widest font-medium uppercase bg-espresso text-cream px-5 py-2 hover:bg-mocha transition-colors duration-200">
+              Order Online
+          </Link>
         </nav>
       </div>
     </header>
