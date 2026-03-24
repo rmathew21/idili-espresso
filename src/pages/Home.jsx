@@ -25,9 +25,14 @@ export default function Home() {
                     South Indian flavors · Specialty coffee · Colorado
                 </p>
 
-                <a href="https://www.idiliespresso.com/store" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-xs tracking-widest font-medium uppercase bg-gold text-espresso px-8 py-3 hover:bg-gold-light transition-colors duration-200">
+                {/* <a href="https://www.idiliespresso.com/store" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-xs tracking-widest font-medium uppercase bg-gold text-espresso px-8 py-3 hover:bg-gold-light transition-colors duration-200">
                     Order Online
-                </a>
+                </a> */}
+                <Link 
+                        to="/order-online"
+                        className="mt-4 inline-block text-xs tracking-widest font-medium uppercase bg-gold text-espresso px-8 py-3 hover:bg-gold-light transition-colors duration-200">
+                        Order Online
+                    </Link>
             </div>
 
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-cream/50">
@@ -42,9 +47,14 @@ export default function Home() {
                 <div className="absolute inset-0 bg-espresso/40 group-hover:bg-espresso/55 transition-colors duration-300" />
                 <div className="relative h-full flex flex-col items-center justify-end p-8 text-center">
                     <h2 className="font-display text-2xl text-cream mb-3">Order Online</h2>
-                    <a href="https://www.idiliespresso.com/store" target="_blank" rel="noopener noreferrer" className="text-xs tracking-widest uppercase text-cream border border-gold px-5 py-2 hover:bg-gold hover:text-espresso transition-all duration-200">
+                    {/* <a href="https://www.idiliespresso.com/store" target="_blank" rel="noopener noreferrer" className="text-xs tracking-widest uppercase text-cream border border-gold px-5 py-2 hover:bg-gold hover:text-espresso transition-all duration-200">
                         Order Now
-                    </a>
+                    </a> */}
+                    <Link 
+                        to="/order-online"
+                        className="text-xs tracking-widest uppercase text-cream border border-gold px-5 py-2 hover:bg-gold hover:text-espresso transition-all duration-200">
+                        Order Online
+                    </Link>
                 </div>
             </div>
 
@@ -57,7 +67,7 @@ export default function Home() {
                 <h2 className="font-display text-2xl text-cream mb-3">Gift Cards</h2>
                 <p className="text-cream/60 text-sm mb-6">Share the warmth of a perfect cup.</p>
                 <a href="https://www.idiliespresso.com/store/p/gift-cards" target="_blank" rel="noopener noreferrer" className="text-xs tracking-widest uppercase text-cream border border-gold/50 px-5 py-2 hover:bg-gold hover:text-espresso hover:border-gold transition-all duration-200">
-                    Shoft Gift Cards
+                    Shop Gift Cards
                 </a>
             </div>
 
