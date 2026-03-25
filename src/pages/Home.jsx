@@ -76,7 +76,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-espresso/40 group-hover:bg-espresso/55 transition-colors duration-300" />
                 <div className="relative h-full flex flex-col items-center justify-end p-8 text-center">
                     <h2 className="font-display text-2xl text-cream mb-3">Download Menu</h2>
-                    <a href="https://www.idiliespresso.com/s/pdfMenu.pdf" target="_blank" rel="noopener noreferrer" className="text-xs tracking-widest uppercase text-cream border border-gold px-5 py-2 hover:bg-gold hover:text-espresso transition-all duration-200">
+                    <a href="https://idiliespresso.com/idili_espresso_menu.pdf" target="_blank" rel="noopener noreferrer" className="text-xs tracking-widest uppercase text-cream border border-gold px-5 py-2 hover:bg-gold hover:text-espresso transition-all duration-200">
                         View PDF
                     </a>
                 </div>

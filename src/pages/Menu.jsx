@@ -100,7 +100,7 @@ export default function Menu() {
                 <div className="mt-16 bg-espresso text-center py-12 px-6">
                     <p className="text-xs tracking-[0.4em] uppercase text-gold font-medium mb-4">Full Menu</p>
                     <p className="font-display text-2xl text-cream mb-6">Want the complete menu?</p>
-                    <a href="https://www.idiliespresso.com/s/pdfMenu.pdf" target="_blank" rel="noopener noreferrer" className="inline-block text-xs-tracking-widest uppercase bg-gold text-expresso px-8 py-3 hover:bg-gold-light transition-colors duration-200 font-medium">Download PDF Menu</a>
+                    <a href="https://idiliespresso.com/idili_espresso_menu.pdf" target="_blank" rel="noopener noreferrer" className="inline-block text-xs-tracking-widest uppercase bg-gold text-expresso px-8 py-3 hover:bg-gold-light transition-colors duration-200 font-medium">Download PDF Menu</a>
                 </div>
 
             </section>
