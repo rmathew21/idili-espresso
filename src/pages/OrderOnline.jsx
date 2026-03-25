@@ -7,7 +7,7 @@ export default function OrderOnline() {
         Coming Soon
       </p>
       <h1 className="font-display text-4xl md:text-5xl text-cream mb-6">
-        Online Ordering
+        Online Ordering & Gift Cards
       </h1>
       <p className="text-cream/70 text-sm tracking-wide max-w-sm mb-10">
         We're working on bringing our South Indian flavors and specialty coffee
